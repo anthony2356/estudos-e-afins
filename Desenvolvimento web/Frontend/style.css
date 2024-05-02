@@ -1,0 +1,77 @@
+/*========= seletores e seus tipos =========*/
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+/*==========================================*/
+
+/*seletor comum*/
+h2 {
+  color: white;
+}
+
+/*seletor múltiplo*/
+strong,
+p {
+  color: rgb(0, 0, 0);
+  width: 500px;
+  border: none;
+}
+
+/*seletor de classes*/
+.título {
+  color: rgb(255, 255, 255);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*seletor de identificador*/
+#lista {
+  color: rgb(0, 0, 0);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*seletor de atributos*/
+a[href] {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*seletor de pseudoclasses*/
+#lista:hover {
+  color: rgb(0, 0, 0);
+  font-family: Arial, Helvetica, sans-serif;
+  border: solid black;
+  border: none;
+}
+
+/*==========================================*/
+/* "caixas" dentro do css */
+
+body {
+  width: 600px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 0 20px 20px 20px;
+  border: 5px solid black;
+  border: none;
+}
+
+html {
+  background-color: white;
+}
+
+h1 {
+  display: block;
+  margin: 0 auto;
+  color: rgb(0, 0, 0);
+  text-shadow: 3px 3px 1px black;
+  text-align: center;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+/*==========================================*/
