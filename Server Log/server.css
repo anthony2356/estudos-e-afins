@@ -1,0 +1,15 @@
+.strSv:hover {
+    box-shadow: 4px 4px 4px black;
+    background-color: lightgreen;
+    border: none;
+}
+
+.stpSv:hover {
+    box-shadow: 4px 4px 4px black;
+    background-color: lightgreen;
+    border: none;
+}
+
+button {
+    border: none;
+}

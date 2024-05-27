@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .strSv:hover {
+            box-shadow: 4px 4px 4px black;
+            background-color: lightgreen;
+            border: none;
+        }
+
+        .stpSv:hover {
+            box-shadow: 4px 4px 4px black;
+            background-color: lightgreen;
+            border: none;
+        }
+
+        button {
+            border: none;
+        }
+    </style>
+
+    <title>Server</title>
+
+</head>
+
+<body style="background-image: linear-gradient(90deg, rgb(28, 28, 54), rgb(13, 185, 207));">
+    <br><br><br><br><br><br><br><br><br>
+
+    <fieldset style="border: none;">
+
+        <div>
+            <div>
+
+                <textarea id="server_status"
+                    style="resize: none; width: 1030px; height: 250px; background-color: black; color: green; font-family: 'Monocraft'; font-size: 20px; margin-left: 100px; border: none; box-shadow: 6px 6px 6px black; outline:none; margin-top: -120px;"></textarea>
+            </div>
+
+            <br><br>
+
+            <div style="text-align: center; margin-top: 30px;">
+
+                <label>
+                    <strong style="font-family: Arial, Helvetica, sans-serif;">
+                        How Many Connections The Server needs:
+                    </strong>
+                </label>
+
+                <input id="connections"><br>
+
+                <label>
+                    <strong style="font-family: Arial, Helvetica, sans-serif;">
+                        Storage:
+                    </strong>
+                </label>
+
+                <input id="server_limit">
+
+            </div>
+
+            <br><br>
+
+            <div style='margin-left: 150px; '>
+                <button class="strSv" onclick="start_Server()"
+                    style="font-size: 60px; cursor: pointer; background-color: green; margin-left: 70px;">
+                    <strong>
+                        start server
+                    </strong>
+                </button>
+
+                <button class="stpSv" onclick="stop_Server()"
+                    style="font-size: 60px; cursor: pointer; background-color: red;">
+                    <strong>
+                        shutdown server
+                    </strong>
+                </button>
+            </div>
+
+        </div>
+
+    </fieldset>
+
+</body>
+
+<script>
+    function start_Server() {
+        alert("[SYSTEM]: Server Started")
+        let connections = document.getElementById("connections").value;
+        let Storage = document.getElementById("server_limit").value;
+        let server_status = document.getElementById("server_status").value;
+        for (vI = Storage; vI < connections; vI++) {
+            server_status = document.getElementById("server_status").value = "[SERVER]: Connections detected: " + vI + "\n" + server_status
+        }
+    }
+
+    function stop_Server() {
+
+        alert("[SYSTEM]: closing server..")
+        alert("[SYSTEM]: Server Closed.")
+
+        let connections = document.getElementById("connections").value = "";
+        let server_limit = document.getElementById("server_limit").value = "";
+        let server_status = document.getElementById("server_status").value = "";
+    }
+
+</script>
+
+</html>
